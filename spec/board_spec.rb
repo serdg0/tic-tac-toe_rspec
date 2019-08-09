@@ -1,19 +1,17 @@
 require './lib/tic-tac-toe'
 
 RSpec.describe Board do
-
-    describe "#check_cell_occupied?" do
+  let(:board) { Board.new }
+  let(:player) { Player.new }
+  describe "#check_cell_occupied?" do
 
         it "return false for an empty cell in a new board" do
-            board = Board.new
             expect(board.check_cell_occupied?(1)).to eql(false)
         end
 
         it "returns true for an occupied cell" do
-            board = Board.new
-            player = Player.new
             player.color = "X"
-            board.return_board_input(1,player)
+            board.return_board_input(1, player)
             expect(board.check_cell_occupied?(1)).to eql(true)
         end
     end
@@ -21,18 +19,14 @@ RSpec.describe Board do
     describe "#check_winner?" do
 
         it "returns true if top row is the winner" do
-            board = Board.new
-            player = Player.new
             player.color = "X"
-            board.return_board_input(1,player)
-            board.return_board_input(2,player)
-            board.return_board_input(3,player)
+            board.return_board_input(1, player)
+            board.return_board_input(2, player)
+            board.return_board_input(3, player)
             expect(board.check_winner?(player)).to eql(true)
         end
 
         it "returns true if middle row is the winner" do
-            board = Board.new
-            player = Player.new
             player.color = "X"
             board.return_board_input(4,player)
             board.return_board_input(5,player)
@@ -41,8 +35,6 @@ RSpec.describe Board do
         end
 
         it "returns true if bottom row is the winner" do
-            board = Board.new
-            player = Player.new
             player.color = "X"
             board.return_board_input(7,player)
             board.return_board_input(8,player)
@@ -51,8 +43,6 @@ RSpec.describe Board do
         end
 
         it "returns true if first column is the winner" do
-            board = Board.new
-            player = Player.new
             player.color = "X"
             board.return_board_input(1,player)
             board.return_board_input(4,player)
@@ -61,8 +51,6 @@ RSpec.describe Board do
         end
 
         it "returns true if second column is the winner" do
-            board = Board.new
-            player = Player.new
             player.color = "X"
             board.return_board_input(2,player)
             board.return_board_input(5,player)
@@ -71,8 +59,6 @@ RSpec.describe Board do
         end
 
         it "returns true if third column is the winner" do
-            board = Board.new
-            player = Player.new
             player.color = "X"
             board.return_board_input(3,player)
             board.return_board_input(6,player)
@@ -81,8 +67,6 @@ RSpec.describe Board do
         end
 
         it "returns true if first diagonal is the winner" do
-            board = Board.new
-            player = Player.new
             player.color = "X"
             board.return_board_input(1,player)
             board.return_board_input(5,player)
@@ -91,8 +75,6 @@ RSpec.describe Board do
         end
 
         it "returns true if second diagonal is the winner" do
-            board = Board.new
-            player = Player.new
             player.color = "X"
             board.return_board_input(3,player)
             board.return_board_input(5,player)
