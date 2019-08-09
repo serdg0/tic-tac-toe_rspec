@@ -38,7 +38,7 @@ Board
 
 * **Sergio Diaz** - *Software Developer* - [serdg0](https://github.com/serdg0)
 
-* **AlejoCode** - *Software Developer * - [AlejoCode](https://github.com/AlejoCode)
+* **AlejoCode** - *Software Developer* - [AlejoCode](https://github.com/AlejoCode)
 
 
 ## Acknowledgments
