@@ -14,8 +14,8 @@ Using rspec we made some Test-Driven-Development to be able to test own code and
 
 We are gonna run the automated tests for this system with rspec by:
 
-    * runing the root of the project in the terminal 
-    * Type rspec 
+* runing the root of the project in the terminal 
+* Type rspec 
 
 ### What are the tests doing ?
 
