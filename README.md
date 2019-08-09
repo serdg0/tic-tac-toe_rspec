@@ -3,7 +3,7 @@
     
 # tic-tac-toe_rspec :desktop_computer:
 
-Using rspec we made some Behavior-Driven-Development to be able to test owr code and azure it's proper functionality
+Using rspec we made some Test-Driven-Development to be able to test own code and ensure it's proper functionality.
   
 ## Getting Started -- Steps for deployment 
 
@@ -14,11 +14,12 @@ Using rspec we made some Behavior-Driven-Development to be able to test owr code
 
 We are gonna run the automated tests for this system with rspec by:
 
-    # runing on the root of the project in a terminal just #rspec 
+    * runing the root of the project in the terminal 
+    * Type rspec 
 
 ### What are the tests doing ?
 
-test the different functions in the code and check their output with their respective outcome like :
+Test the different functions in the code and check their output with their respective outcome like :
 
 Board
   #check_cell_occupied?
