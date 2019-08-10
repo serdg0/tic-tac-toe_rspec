@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 class Player
-    attr_accessor :name, :color
+  attr_accessor :name, :color
 end
 
-class String 
+class String
   def colorize(color_code)
     "\e[#{color_code}m#{self}\e[0m"
   end
@@ -11,7 +13,7 @@ class String
     colorize(31)
   end
 
-  def blue 
+  def blue
     colorize(34)
   end
 
@@ -30,5 +32,4 @@ class String
   def white
     colorize(37)
   end
-
 end
