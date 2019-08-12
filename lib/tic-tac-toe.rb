@@ -7,8 +7,8 @@ class Game
   attr_accessor :turn, :player_1, :player_2, :board
 
   def initialize(player_1 = nil, player_2 = nil, board = nil)
-    @player_1 = player_1
-    @player_2 = player_2
+    @player1 = player_1
+    @player2 = player_2
     @board = board
     @turn = 0
   end
@@ -66,19 +66,19 @@ class Game
         What is your name ....    ??????
 
             ".red
-    @player_1.name = gets.chomp
-    @player_1.color = 'X'.red
+    @player1.name = gets.chomp
+    @player1.color = 'X'.red
     puts "
 
-    Your icon is #{@player_1.color}. You will make the first shot"
+    Your icon is #{@player1.color}. You will make the first shot"
     puts "
 
     "
     puts '               And your name is ...?'.red
-    @player_2.name = gets.chomp
-    @player_2.color = 'O'.blue
-    puts "Your icon is #{@player_2.color}. You will go second"
-    @player_1
+    @player2.name = gets.chomp
+    @player2.color = 'O'.blue
+    puts "Your icon is #{@player2.color}. You will go second"
+    @player1
   end
 
   def current_name(current_player)
@@ -91,9 +91,9 @@ class Game
 
   def player_turn(turn)
     if turn.even?
-      @player_1
+      @player1
     else
-      @player_2
+      @player2
     end
   end
 
@@ -175,8 +175,8 @@ class TicTacToe
         break
       end
       input = @game.get_input(@game.current_name(current_player))
-      inputNotRepeated = @game.not_repeated(input)
-      next unless inputNotRepeated == false
+      input_not_repeated = @game.not_repeated(input)
+      next unless input_not_repeated == false
 
       @game.switch_board(input, current_player)
       if @game.winner?(current_player) == true
@@ -198,8 +198,8 @@ class TicTacToe
 
           ".blink.yellow.red_background
         puts 'If you want to play again type Y, if not type anything else'
-        reGame = gets.chomp
-        if reGame == 'Y' || reGame == 'y'
+        re_game = gets.chomp
+        if re_game.include?['y', 'Y']
           player_one = Player.new
           player_two = Player.new
           main_board = Board.new
